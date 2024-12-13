@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Time Management",
+        "author": "sujan",
+        "year": 2023,
+        "price": 200,
+        "quantity": 20,
+        "isbn": 841186,
+        "bookAddDate": "13-12-24 16:26:38",
+        "updateBook": "13-12-24 16:26:38"
+    },
+    {
+        "title": "Habbits",
+        "author": "sohel",
+        "year": 2020,
+        "price": 190,
+        "quantity": 9,
+        "isbn": 976180,
+        "bookAddDate": "13-12-24 16:26:57",
+        "updateBook": "13-12-24 16:26:57"
+    }
+]
