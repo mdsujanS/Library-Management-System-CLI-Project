@@ -17,6 +17,7 @@ def borrowing(booksList, userDetails):
                 returnDate = datetime.strptime(inputDate, dateFormat).date()
             except:
                 print("Invalid date format. use (DD-MM-YYYY)")
+                
             
             user ={
                 'title' : search,
@@ -25,6 +26,7 @@ def borrowing(booksList, userDetails):
                 'returnDate': returnDate,
                 
             }
+            
             userDetails.append(user)
             saveUser.userDetails(userDetails)
             
