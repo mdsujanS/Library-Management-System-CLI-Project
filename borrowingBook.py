@@ -1,7 +1,7 @@
-import datetime 
-import saveUser
-import saveAllBooks
 
+import saveUser
+import saveAllBooksfrom 
+from datetime import datetime
 
 
 def borrowing(booksList, userDetails):
@@ -10,9 +10,13 @@ def borrowing(booksList, userDetails):
         if book['title'] == search:
             userName = input("Enter Your name: ")
             phoneNumber = input("Enter Your Phone Number: ")
-            returnDate = int(input("Entr return Date: "))
+            inputDate =input('Enter a date (DD-MM-YYYY): ')
             
-            currentTime = datetime.datetime.now().strftime("%d-%m-%y %H:%M:%S")
+            dateFormat ="%d-%m-%y"
+            try:
+                returnDate = datetime.strptime(inputDate, dateFormat).date()
+            except:
+                print("Invalid date format. use (DD-MM-YYYY)")
             
             user ={
                 'title' : search,
@@ -25,7 +29,7 @@ def borrowing(booksList, userDetails):
             saveUser.userDetails(userDetails)
             
             book['quantity'] = book['quantity'] - 1 
-            saveAllBooks.saveBooks(booksList)
+            saveAllBooksfrom.saveBooks(booksList)
             
     else:
         print("No enought books are available to lend")
